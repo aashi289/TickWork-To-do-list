@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul li.checked {
+            background: #888;
+            color: black;
+            text-decoration: line-through;
+        }
+
+
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+
+        .close {
+            position: absolute;
+           
+        }
+    </style>
+
+    <title>TickWork : Your everyday to do list. </title>
+
+</head>
+
+<body class="bg-[url(https://www.visiondesign.com/wp-content/uploads/to-do-list-background.jpg)] ">
+
+
+    <div class="navbar flex justify-between bg-black bg-opacity-35 items-center p-1">
+        <div class="flex justify-center items-center md:order-2">
+            <div class="hamburger inline-block p-4 cursor-pointer ">
+                <div class="line h-0.5 w-6 bg-white my-1 "></div>
+                <div class="line h-0.5 w-6 bg-white my-1 "></div>
+                <div class="line h-0.5 w-6 bg-white my-1 "></div>
+            </div>
+        </div>
+        <div class="p-4 flex flex-row ">
+            <h1 class="text-white font-extrabold text-2xl ">TickWork</h1><br>
+            <h1 class="text-blue-700 text-2xl font-extrabold"> .</h1>
+        </div>
+    </div>
+
+    <div class="heading md:px-48 py-8 px-8 flex flex-row ">
+        <h1 class="simple font-bold text-white text-xl md:text-4xl">A simple to do list to manage your day to day task.
+        </h1>
+    </div>
+    <div class="md:px-48 px-8 py-4 flex flex-row">
+        <h3 class="simple font-medium text-white text-lg md:text-2xl"> Organize your work and life. Become focused,
+            organized, and calm with <span
+                class="simple font-serif hover:italic text-white text-lg md:text-2xl">TickWork: Your
+                everyday to do list.</span>
+        </h3>
+
+    </div>
+
+    <div class="md:px-48 px-8 py-4">
+        <button
+            class="btn px-2 py-1 bg-gray-800 hover:bg-gray-900 active:bg-gray-950 text-white font-medium hover:italic border-spacing-1 border-black">For
+            more
+            information ></button>
+        <div class="wiki bg-amber-50 px-2 py-2">
+            <h3 class="font-medium px-2 py-2">Welcome to TickWork, where organization meets simplicity. TickWork is your
+                go-to platform for
+                managing tasks, staying productive, and achieving your goals with ease.</h3>
+
+        </div>
+    </div>
+
+    <div class="md:px-48 px-8 py-4 " id="myDIV">
+        <div class="main  px-10 font-bold text-left py-4 font-serif underline italic text-4xl text-white ">
+            Things To Do </div>
+        <input type="text" id="myInput" class=" float-left w-[75%]" placeholder="Title...">
+        <span onclick="newElement()"
+            class="addBtn text-center px-1 float-right bg-gray-300 w-[25%] text-black font-normal">Add</span>
+    </div>
+
+
+    <ul class="md:px-48 px-8 py-4 [&>*:nth-child(even)]:bg-slate-400 [&>*:nth-child(odd)]:bg-slate-100  font-medium"
+        id="myUL">
+
+        <li class="checked text-gray-500 font-light">Default..</li>
+
+
+    </ul>
+
+    <footer class="bg-black bg-opacity-35 py-6 ">
+        <p class="px-4 text-xs font-serif">Questions? Contact us.</p>
+        <div class="foot flex flex-row space-x-2">
+            <div class="flex flex-col "> <img class="h-6 w-16" src="youtube-logo-thin-svgrepo-com.svg"> <a href="#"
+                    class=" px-4 text-xs">Youtube</a></div>
+
+            <div class="flex flex-col "> <img class="h-6 w-16" src="instagram-logo-thin-svgrepo-com.svg"> <a href="#"
+                    class=" px-4 text-xs">Instagram</a></div>
+
+            <div class="flex flex-col "> <img class="h-6 w-16" src="icons8-gmail.svg"> <a href="#"
+                    class=" text-xs px-4">Gmail</a></div>
+
+
+        </div>
+
+        <div class="links">
+            <ul class="text-xs px-4">
+                <li>FAQ</li>
+                <li>Ways to Use</li>
+                <li>Terms of Use</li>
+                <li>Privacy</li>
+                <li>Cookie Preferences</li>
+                <li>Corporate Information</li>
+                <li>Contact Us</li>
+
+            </ul>
+        </div>
+        <span class="py-1 text-sm text-gray-100 px-4">&copy; TickWork: Your everyday to do list. </span>
+    </footer>
+
+
+
+
+</body>
+
+
+
+<script src="jquery-3.7.1.min.js"></script>
+<script src="myjQuery.js"></script>
+
+</html>
